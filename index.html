@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nathaniel Steave Harjanto - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .space-bg {
+      background: radial-gradient(ellipse at bottom, #0f2027 0%, #203a43 50%, #2c5364 100%);
+    }
+    .fade-enter {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease-out;
+    }
+    .fade-in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .scroll-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background-color: #06b6d4;
+      color: white;
+      padding: 0.75rem;
+      border-radius: 9999px;
+      display: none;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      z-index: 50;
+    }
+    .scroll-top.show {
+      display: block;
+    }
+    .active-link {
+      color: #06b6d4;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body class="text-white font-sans space-bg">
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollTop" class="scroll-top">↑</button>
+
+  <!-- Navbar -->
+  <header class="fixed w-full z-30 bg-black bg-opacity-40 backdrop-blur-md shadow-sm transition-all">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-cyan-400">Nathaniel</h1>
+      <nav id="navbar" class="space-x-6 text-sm">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#certificates" class="nav-link">Certificates</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="pt-24 space-y-40">
+
+    <!-- Home Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center px-4 fade-enter text-center">
+      <div>
+        <h2 class="text-5xl md:text-6xl font-bold text-cyan-300 mb-4">Hi, I'm Nathaniel Steave Harjanto 🚀</h2>
+        <p class="text-lg text-gray-300 mb-6">IT Enthusiast | Informatics Student | Data Science Learner</p>
+        <a href="#contact" class="px-6 py-3 bg-cyan-600 text-white rounded-xl hover:bg-cyan-700 transition">Get in Touch</a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="max-w-3xl mx-auto px-4 text-center fade-enter" style="scroll-margin-top: 100px;">
+      <h3 class="text-3xl font-semibold text-cyan-400 mb-6">👦🏻 About Me</h3>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        I'm an undergraduate Informatics student at Universitas Sebelas Maret with a strong foundation in IT—particularly in programming, web development, and database management. I am skilled in Python, Java, and C++, and experienced with MySQL. Currently exploring the field of data science, I’m enthusiastic about machine learning, data analysis, and AI. I aim to apply this knowledge to real-world problems and make impactful contributions to the tech field.
+      </p>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="max-w-6xl mx-auto px-4 fade-enter">
+      <h3 class="text-3xl font-semibold text-center text-cyan-400 mb-12">🌟 Featured Projects</h3>
+      <div class="grid md:grid-cols-3 gap-8 text-gray-300">
+        
+        <div class="bg-gray-800 bg-opacity-60 p-6 rounded-2xl shadow-lg hover:shadow-cyan-500/20 transition duration-300 ease-in-out">
+          <h4 class="text-xl font-bold text-cyan-300 mb-2">Prayer Attendance App</h4>
+          <p>A real-time geolocation-based attendance web application for SMK N 4 Klaten students. Includes live check-in validation, attendance history, and student login.</p>
+        </div>
+
+        <div class="bg-gray-800 bg-opacity-60 p-6 rounded-2xl shadow-lg hover:shadow-cyan-500/20 transition duration-300 ease-in-out">
+          <h4 class="text-xl font-bold text-cyan-300 mb-2">CO₂ Emission Forecast for Spain</h4>
+          <p>Developed a machine learning model using Random Forest Regressor to predict Spain's CO₂ emissions. Utilized feature selection optimization and Looker Studio for interactive visual dashboard creation.</p>
+        </div>
+
+        <div class="bg-gray-800 bg-opacity-60 p-6 rounded-2xl shadow-lg hover:shadow-cyan-500/20 transition duration-300 ease-in-out">
+          <h4 class="text-xl font-bold text-cyan-300 mb-2">EasyShop Web App</h4>
+          <p>Created an e-commerce web platform using Laravel focused on fashion retail, with features such as product listing, cart management, and basic admin control for inventory.</p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Gallery -->
+    <section id="gallery" class="max-w-6xl mx-auto px-4 fade-enter">
+      <h3 class="text-3xl font-semibold text-center text-cyan-400 mb-12">📷 Project Gallery</h3>
+      <div class="grid md:grid-cols-3 gap-6">
+        <img src="img/dashboard startup.jpg" class="rounded-xl shadow-md hover:scale-105 transition" alt="Screenshot 1">
+        <img src="img/final project startup.jpg" class="rounded-xl shadow-md hover:scale-105 transition" alt="Screenshot 2">
+        <img src="img/insight startup.png" class="rounded-xl shadow-md hover:scale-105 transition" alt="Screenshot 3">
+        <img src="img/web shopping.png" class="rounded-xl shadow-md hover:scale-105 transition" alt="Screenshot 4">
+        <img src="img/web sneka.png" class="rounded-xl shadow-md hover:scale-105 transition" alt="Screenshot 5">
+        <img src="img/project daa.png" class="rounded-xl shadow-md hover:scale-105 transition" alt="Screenshot 6">
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="max-w-4xl mx-auto px-4 text-center fade-enter">
+      <h3 class="text-3xl font-semibold text-cyan-400 mb-6">💼 Experience</h3>
+      <ul class="space-y-6 text-left text-gray-300">
+        
+        <li class="bg-gray-800 p-4 rounded-lg shadow">
+          <h4 class="font-semibold text-cyan-300 text-xl">IT Intern – SMK Negeri 4 Klaten</h4>
+          <p class="text-sm text-gray-400">Feb 2025 – Apr 2025</p>
+          <p>Developed a comprehensive web-based internship attendance system using Laravel, with features including real-time admin dashboards, data filtering, and geolocation.</p>
+        </li>
+        
+        <li class="bg-gray-800 p-4 rounded-lg shadow">
+          <h4 class="font-semibold text-cyan-300 text-xl">Data Science Intern – Startup Campus</h4>
+          <p class="text-sm text-gray-400">Sep 2024 – Dec 2024</p>
+          <p>Built predictive models using Python & scikit-learn on environmental datasets to support sustainable decision-making. Participated in cross-functional collaboration and delivered presentations on data-driven insights.</p>
+        </li>
+        
+        <li class="bg-gray-800 p-4 rounded-lg shadow">
+          <h4 class="font-semibold text-cyan-300 text-xl">Institutional Independence Staff – HIMASTER UNS</h4>
+          <p class="text-sm text-gray-400">Jan 2023 – Dec 2023</p>
+          <p>Assisted in planning and organizing internal events, maintaining member records, and ensuring smooth communication within the Informatics Student Association.</p>
+        </li>
+
+      </ul>
+    </section>
+
+
+    <!-- Education -->
+    <section id="education" class="max-w-4xl mx-auto px-4 text-center fade-enter">
+      <h3 class="text-3xl font-semibold text-cyan-400 mb-6">🎓 Education</h3>
+      <ul class="text-left text-gray-300 space-y-6">
+        
+        <li class="bg-gray-800 p-4 rounded-lg shadow">
+          <p class="text-lg font-semibold text-white">Bachelor of Informatics</p>
+          <p class="text-sm italic">Sebelas Maret University — Aug 2022 - Present</p>
+          <p class="mt-2 text-gray-300">
+            I chose informatics because I see a lot of potential job opportunities that can be done worldwide through technology. I feel that information technology is the future of the world ahead.
+          </p>
+          <p class="mt-1 font-medium text-white">GPA: 3.49 / 4.00</p>
+        </li>
+        
+        <li class="bg-gray-800 p-4 rounded-lg shadow">
+          <p class="text-lg font-semibold text-white">Senior High School</p>
+          <p class="text-sm italic">SMA Negeri 3 Surakarta — Aug 2020 - Jun 2022</p>
+          <p class="mt-2 text-gray-300">
+            I have graduated from Senior High School 3 Surakarta in 2022. I completed my education in high school for 2 years, I took Science Program since 10th grade to 12th grade.
+          </p>
+          <p class="mt-1 font-medium text-white">Grade: 94.74 / 100</p>
+        </li>
+
+      </ul>
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="max-w-3xl mx-auto px-4 text-center fade-enter">
+      <h3 class="text-3xl font-semibold text-cyan-400 mb-6">📞 Contact</h3>
+      <p class="text-gray-300 mb-4">I'm open for collaboration, projects, or freelance work!</p>
+      <p class="text-lg text-cyan-300">
+        📧 <a href="mailto:nathanielsteave10@gmail.com" class="hover:underline">nathanielsteave10@gmail.com</a>
+      </p>
+      <p class="text-lg text-cyan-300">
+        🌐 <a href="https://www.linkedin.com/in/nathanielsteave" target="_blank" rel="noopener noreferrer" class="hover:underline">
+          linkedin.com/in/nathanielsteave
+        </a>
+      </p>
+      
+    </section>
+  </main>
+
+  <footer class="text-center text-gray-400 py-6 border-t border-gray-700 mt-32">
+    &copy; 2025 Nathaniel Steave Harjanto. All rights reserved.
+  </footer>
+
+  <!-- JS -->
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('fade-in');
+      });
+    });
+    document.querySelectorAll('.fade-enter').forEach(el => observer.observe(el));
+
+    const scrollBtn = document.getElementById('scrollTop');
+    window.addEventListener('scroll', () => {
+      scrollBtn.classList.toggle('show', window.scrollY > 300);
+    });
+    scrollBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    const sections = document.querySelectorAll("main section");
+    const navLinks = document.querySelectorAll(".nav-link");
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 100;
+        if (pageYOffset >= sectionTop) {
+          current = section.getAttribute("id");
+        }
+      });
+      navLinks.forEach((link) => {
+        link.classList.remove("active-link");
+        if (link.getAttribute("href") === "#" + current) {
+          link.classList.add("active-link");
+        }
+      });
+    });
+  </script>
+</body>
+</html>
